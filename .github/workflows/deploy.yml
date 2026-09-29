@@ -12,14 +12,22 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: 📂 Sync files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/
-          protocol: ftp
+      - name: 📦 Install LFTP
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: 📂 Sync files via LFTP
+        run: |
+          lftp -c "
+            set ssl:verify-certificate false;
+            set ftp:ssl-allow true;
+            set ftp:passive-mode true;
+            set net:timeout 15;
+            set net:max-retries 3;
+            open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' '${{ secrets.FTP_SERVER }}';
+            mirror -R -v \
+              --exclude-glob .git* \
+              --exclude-glob .github* \
+              --only-newer \
+              ./ public_html/
+          "
