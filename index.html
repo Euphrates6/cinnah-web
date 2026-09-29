@@ -569,119 +569,30 @@
 
       <div class="brief-container">
         
-        <form id="brief-form">
-          
-          <!-- Adım 1: Hizmetler -->
-          <div class="brief-step-wrap">
-            <div class="brief-step-title">[ADIM 01 / 03] İhtiyaç Duyduğunuz Disiplinler</div>
-            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Hangi Alanlarda Yaratıcı Güç Arıyorsunuz?</div>
-            
-            <div class="selectable-chips-grid" id="brief-services">
-              <div class="selectable-chip selected" data-value="Kreatif Direktörlük">
-                <span class="chip-label">Kreatif Direktörlük</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="Marka Kimliği">
-                <span class="chip-label">Marka Kimliği</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="360° Kampanya">
-                <span class="chip-label">360° Reklam Kampanyası</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="Dijital & Mekansal Deneyim">
-                <span class="chip-label">Dijital & Mekansal Deneyim</span>
-                <div class="chip-indicator"></div>
-              </div>
-            </div>
+        <form id="brief-form" class="clean-contact-form">
+          <div class="input-field-group">
+            <label for="brief-name">ADINIZ (GEREKLİ)</label>
+            <input type="text" id="brief-name" name="name" required>
           </div>
 
-          <!-- Adım 2: Zaman Çizelgesi -->
-          <div class="brief-step-wrap">
-            <div class="brief-step-title">[ADIM 02 / 03] Zaman Çizelgesi</div>
-            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Projenin Hedeflenen Tamamlanma Süresi</div>
-            
-            <div class="selectable-chips-grid" id="brief-timeline">
-              <div class="selectable-chip" data-value="1-2 Ay (Hızlı Faz)">
-                <span class="chip-label">1 - 2 Ay (Hızlı Faz)</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip selected" data-value="2-4 Ay (Standart)">
-                <span class="chip-label">2 - 4 Ay (Standart)</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="4-6+ Ay (Kapsamlı Dönüşüm)">
-                <span class="chip-label">4 - 6+ Ay (Kapsamlı Dönüşüm)</span>
-                <div class="chip-indicator"></div>
-              </div>
-            </div>
+          <div class="input-field-group">
+            <label for="brief-email">E-POSTA ADRESİNİZ (GEREKLİ)</label>
+            <input type="email" id="brief-email" name="email" required>
           </div>
 
-          <!-- Adım 3: Bütçe -->
-          <div class="brief-step-wrap">
-            <div class="brief-step-title">[ADIM 03 / 03] Yatırım Ölçeği</div>
-            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Hedeflenen Bütçe Aralığı</div>
-            
-            <div class="selectable-chips-grid" id="brief-budget">
-              <div class="selectable-chip" data-value="₺100.000 - ₺250.000">
-                <span class="chip-label">₺100.000 - ₺250.000</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip selected" data-value="₺250.000 - ₺500.000">
-                <span class="chip-label">₺250.000 - ₺500.000</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="₺500.000 - ₺1.000.000+">
-                <span class="chip-label">₺500.000 - ₺1.000.000+</span>
-                <div class="chip-indicator"></div>
-              </div>
-              <div class="selectable-chip" data-value="Kurumsal & Özel Ölçek">
-                <span class="chip-label">Kurumsal & Özel Ölçek</span>
-                <div class="chip-indicator"></div>
-              </div>
-            </div>
+          <div class="input-field-group">
+            <label for="brief-subject">KONU</label>
+            <input type="text" id="brief-subject" name="subject" required>
           </div>
 
-          <!-- İletişim Bilgisi Girişi -->
-          <div class="brief-inputs-grid">
-            <div class="input-field-group">
-              <label for="brief-name">Adınız & Soyadınız *</label>
-              <input type="text" id="brief-name" placeholder="Örn. Selim Yılmaz" required>
-            </div>
-            <div class="input-field-group">
-              <label for="brief-email">Kurumsal E-Posta *</label>
-              <input type="email" id="brief-email" placeholder="selim@marka.com" required>
-            </div>
-            <div class="input-field-group">
-              <label for="brief-company">Marka / Şirket Adı</label>
-              <input type="text" id="brief-company" placeholder="Örn. Aura Holding">
-            </div>
-            <div class="input-field-group">
-              <label for="brief-phone">Telefon Numarası</label>
-              <input type="tel" id="brief-phone" placeholder="+90 (5xx) xxx xx xx">
-            </div>
-            <div class="input-field-group full-width">
-              <label for="brief-message">Proje Hakkında Kısa Not / Vizyonunuz</label>
-              <textarea id="brief-message" rows="3" placeholder="Markanızın hedefleri ve aradığınız dönüşüm hakkında kısa detaylar..."></textarea>
-            </div>
+          <div class="input-field-group">
+            <label for="brief-message">İLETİNİZ</label>
+            <textarea id="brief-message" name="message" rows="8" required></textarea>
           </div>
 
-          <!-- Canlı Özet Çubuğu & Gönderim -->
-          <div class="brief-summary-bar">
-            <div class="brief-summary-text">
-              SEÇİLEN DİSİPLİNLER: <strong id="brief-summary-service">Kreatif Direktörlük</strong> · 
-              SÜRE: <strong id="brief-summary-timeline">2-4 Ay (Standart)</strong> · 
-              ÖLÇEK: <strong id="brief-summary-budget">₺250.000 - ₺500.000</strong>
-            </div>
-
-            <button type="submit" class="btn-primary">
-              <span>Brifi Gönder & Tanışalım</span>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
-              </svg>
-            </button>
+          <div class="form-submit-row">
+            <button type="submit" class="btn-clean-submit">GÖNDER</button>
           </div>
-
         </form>
 
       </div>

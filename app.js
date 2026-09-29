@@ -407,70 +407,24 @@ function initPortfolioSystem() {
    07. INTERACTIVE BRIEF BUILDER ("HAREKETE GEÇ")
    ========================================================================== */
 function initBriefBuilder() {
-  const serviceChips = document.querySelectorAll('#brief-services .selectable-chip');
-  const timelineChips = document.querySelectorAll('#brief-timeline .selectable-chip');
-  const budgetChips = document.querySelectorAll('#brief-budget .selectable-chip');
-  const summaryService = document.getElementById('brief-summary-service');
-  const summaryTimeline = document.getElementById('brief-summary-timeline');
-  const summaryBudget = document.getElementById('brief-summary-budget');
   const briefForm = document.getElementById('brief-form');
+  if (!briefForm) return;
 
-  let selectedServices = ['Kreatif Direktörlük'];
-  let selectedTimeline = '2-3 Ay';
-  let selectedBudget = '₺250.000 - ₺500.000';
+  briefForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('brief-name')?.value.trim();
+    const email = document.getElementById('brief-email')?.value.trim();
+    const subject = document.getElementById('brief-subject')?.value.trim();
+    const message = document.getElementById('brief-message')?.value.trim();
 
-  function updateChips(chips, isMulti = false, onUpdate) {
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const val = chip.getAttribute('data-value');
-        if (isMulti) {
-          chip.classList.toggle('selected');
-          selectedServices = Array.from(chips)
-            .filter(c => c.classList.contains('selected'))
-            .map(c => c.getAttribute('data-value'));
-          if (selectedServices.length === 0) {
-            selectedServices = ['Belirtilmedi'];
-          }
-        } else {
-          chips.forEach(c => c.classList.remove('selected'));
-          chip.classList.add('selected');
-        }
-        if (onUpdate) onUpdate(val);
-      });
-    });
-  }
+    if (!name || !email || !message) {
+      showToast('Lütfen gerekli alanları doldurunuz.');
+      return;
+    }
 
-  updateChips(serviceChips, true, () => {
-    if (summaryService) summaryService.textContent = selectedServices.join(', ');
+    showToast(`Teşekkürler Sayın ${name}. İletiniz başarıyla alındı, en kısa sürede dönüş yapacağız.`);
+    briefForm.reset();
   });
-
-  updateChips(timelineChips, false, (val) => {
-    selectedTimeline = val;
-    if (summaryTimeline) summaryTimeline.textContent = val;
-  });
-
-  updateChips(budgetChips, false, (val) => {
-    selectedBudget = val;
-    if (summaryBudget) summaryBudget.textContent = val;
-  });
-
-  if (briefForm) {
-    briefForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('brief-name').value;
-      const email = document.getElementById('brief-email').value;
-      const company = document.getElementById('brief-company').value;
-      const message = document.getElementById('brief-message').value;
-
-      if (!name || !email) {
-        showToast('Lütfen Ad ve E-posta alanlarını doldurunuz.');
-        return;
-      }
-
-      showToast(`Teşekkürler Sayın ${name}. Proje brifiniz Ankara merkezimize iletildi.`);
-      briefForm.reset();
-    });
-  }
 }
 
 /* ==========================================================================
