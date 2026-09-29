@@ -970,10 +970,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Red Highlight on His Card */
-.manifesto-card.featured-red {
-  background-color: var(--c-black-surface);
-}
+
 
 /* ==========================================================================
    SELECTED WORKS / PORTFOLIO SECTION
@@ -1178,36 +1175,17 @@ body {
 
 .service-row {
   display: grid;
-  grid-template-columns: 0.15fr 0.45fr 0.4fr;
+  grid-template-columns: 80px 1.15fr 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
   padding: 3rem 0;
   border-bottom: 1px solid var(--c-black-border);
   align-items: flex-start;
-  transition: background-color var(--transition-fast), padding-left var(--transition-normal);
-  cursor: pointer;
-  position: relative;
-}
-
-.service-row::before {
-  content: '';
-  position: absolute;
-  left: -2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  background-color: var(--c-red);
-  transition: width 0.3s ease, height 0.3s ease;
+  transition: background-color var(--transition-fast);
+  cursor: default;
 }
 
 .service-row:hover {
-  background-color: rgba(255, 26, 39, 0.03);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.service-row:hover::before {
-  width: 6px;
-  height: 70%;
+  background-color: rgba(255, 26, 39, 0.025);
 }
 
 .service-index {
@@ -1215,6 +1193,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--c-red);
+  transition: color var(--transition-fast);
 }
 
 .service-main-title {
@@ -1227,15 +1206,16 @@ body {
   transition: color var(--transition-fast);
 }
 
-.service-row:hover .service-main-title {
-  color: var(--c-white);
-}
-
 .service-desc-column p {
   font-size: 1.05rem;
   color: var(--c-gray-muted);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  transition: color var(--transition-fast);
+}
+
+.service-row:hover .service-desc-column p {
+  color: var(--c-offwhite);
 }
 
 .service-deliverables-list {
@@ -1252,6 +1232,11 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.service-row:hover .service-deliverables-list li {
+  color: var(--c-white);
 }
 
 .service-deliverables-list li::before {
@@ -1923,8 +1908,9 @@ body {
   }
 
   .service-row {
-    grid-template-columns: 0.15fr 1fr;
+    grid-template-columns: 60px 1fr;
     gap: 1.5rem;
+    padding: 2.5rem 0;
   }
 
   .service-desc-column {
@@ -2016,6 +2002,16 @@ body {
   .stats-counter-strip {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .service-row {
+    grid-template-columns: 45px 1fr;
+    gap: 1.25rem;
+    padding: 2.25rem 0;
+  }
+
+  .service-deliverables-list {
+    grid-template-columns: 1fr;
   }
 
   .floating-quote-badge {

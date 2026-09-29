@@ -97,7 +97,7 @@ function initCustomCursor() {
   requestAnimationFrame(renderCursor);
 
   // Hover state detection
-  const interactiveElements = document.querySelectorAll('a, button, .work-card, .selectable-chip, .service-row, .manifesto-card, input, textarea');
+  const interactiveElements = document.querySelectorAll('a, button, .work-card, .selectable-chip, .manifesto-card, input, textarea');
   
   interactiveElements.forEach((el) => {
     el.addEventListener('mouseenter', () => {
