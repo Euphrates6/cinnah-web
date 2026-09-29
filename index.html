@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CİNNAH | Büyüme İçin Yaratıcı Yön — Ankara'dan. Dünyaya.</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="CİNNAH — Ankara merkezli bağımsız yaratıcı reklam ve marka direksiyonu ajansı. Stratejiden deneyime, markanızın bıraktığı hissi tasarlıyoruz.">
+  <meta name="keywords" content="Cinnah, Reklam Ajansı, Kreatif Direktörlük, Marka Stratejisi, Ankara, Marka Mimarisi, Kampanya, Tasarım">
+  <meta property="og:title" content="CİNNAH | Büyüme İçin Yaratıcı Yön">
+  <meta property="og:description" content="Ankara'dan. Dünyaya. Bir şehirden doğan, sınırları aşan bakış.">
+  <meta property="og:image" content="assets/images/brand_01_kok.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FF1A27'/><rect x='10' y='10' width='12' height='12' fill='%23080808'/></svg>">
+
+  <!-- Modern Google Fonts: Plus Jakarta Sans, Syne, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SİNEMATİK AÇILIŞ İNTROSU (CİNNAH KARE PORTAL PRELOADER)
+       ========================================================================== -->
+  <div class="cinnah-intro-preloader" id="cinnah-preloader">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-stage">
+      <div class="preloader-square-wrapper" id="preloader-square">
+        <div class="preloader-square-monolith">
+          <div class="preloader-square-cutout"></div>
+        </div>
+      </div>
+      <div class="preloader-brand-meta" id="preloader-meta">
+        <span class="preloader-title">cinnah.</span>
+        <span class="preloader-tagline">BÜYÜME İÇİN YARATICI YÖN</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Özel Kursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-frame"></div>
+
+  <!-- Arka Plan Grid & Efekt -->
+  <div class="bg-canvas-container">
+    <canvas id="ambient-canvas"></canvas>
+  </div>
+  <div class="architectural-grid"></div>
+
+  <!-- ==========================================================================
+       SİTE HEADER / MENÜ
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      
+      <!-- Marka Logosu -->
+      <a href="#hero" class="brand-logo-link" aria-label="Cinnah Anasayfa">
+        <div class="brand-icon-box">
+          <div class="brand-icon-inner"></div>
+        </div>
+        <div class="brand-wordmark">cinnah<span>.</span></div>
+      </a>
+
+      <!-- Türkçe Kolonlu Navigasyon Menüsü -->
+      <nav class="nav-structured-menu" aria-label="Ana Menü">
+        
+        <!-- Kolon 1: Portföy -->
+        <div class="nav-col">
+          <div class="nav-col-heading">
+            <span class="nav-icon-glyph glyph-triangle" aria-hidden="true"></span>
+            <span class="nav-col-title">Portföy</span>
+          </div>
+          <ul class="nav-sublinks-list">
+            <li><a href="#works" class="nav-sublink">Projeler</a></li>
+            <li><a href="#services" class="nav-sublink">İçgörüler</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolon 2: Hikaye -->
+        <div class="nav-col">
+          <div class="nav-col-heading">
+            <span class="nav-icon-glyph glyph-circle" aria-hidden="true"></span>
+            <span class="nav-col-title">Hikaye</span>
+          </div>
+          <ul class="nav-sublinks-list">
+            <li><a href="#studio" class="nav-sublink">Hakkımızda</a></li>
+            <li><a href="#manifesto" class="nav-sublink">Marka Hikayesi</a></li>
+            <li><a href="#contact" class="nav-sublink">İletişim</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolon 3: İş Birliği -->
+        <div class="nav-col">
+          <div class="nav-col-heading">
+            <span class="nav-icon-glyph glyph-square" aria-hidden="true"></span>
+            <span class="nav-col-title">İş Birliği</span>
+          </div>
+          <ul class="nav-sublinks-list">
+            <li><a href="#brief-builder" class="nav-sublink">Markalar İçin</a></li>
+            <li><a href="#contact" class="nav-sublink">Ajanslar İçin</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+      <!-- Canlı Ankara Saati & Keşfet Butonu -->
+      <div class="header-right-meta">
+        <div class="digital-time-box" title="Ankara Yerel Saati">
+          <span class="time-bracket">[</span>
+          <span id="live-ankara-time">15:30:00</span>
+          <span class="time-bracket">]</span>
+          <div class="time-tz-stack">
+            <span>TRT</span>
+            <span>ANKARA</span>
+          </div>
+        </div>
+
+        <a href="#works" class="header-discover-link" aria-label="Aşağı Kaydır">↓</a>
+
+        <!-- Mobil Menü Butonu -->
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Menüyü Aç">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO BÖLÜMÜ (DİNAMİK CİNNAH KARE LOGOSU & MİNİMALİST SAHNE)
+       ========================================================================== -->
+  <section class="hero-section modern-minimal-hero" id="hero">
+    
+    <!-- Sol Yüzen İletişim Butonu -->
+    <a href="#brief-builder" class="floating-touch-pill" aria-label="İletişime Geçin">
+      <span class="pill-dot"></span>
+      <span class="pill-text">İletişime Geçin →</span>
+      <span class="pill-dot"></span>
+    </a>
+
+    <!-- Dinamik 3D Cinnah Kare Portalı -->
+    <div class="hero-dynamic-portal-stage">
+      <div class="cinnah-portal-gyroscope" id="portal-gyroscope">
+        <div class="portal-halo-glow"></div>
+        <div class="portal-grid-lines"></div>
+        
+        <!-- Dış Katman Çerçeveler -->
+        <div class="portal-frame-layer layer-3"></div>
+        <div class="portal-frame-layer layer-2"></div>
+        <div class="portal-frame-layer layer-1"></div>
+
+        <!-- Ana Cinnah Kare Monolit İkonu -->
+        <div class="cinnah-monolith-square">
+          <div class="cinnah-monolith-cutout"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Merkez Minimalist Tipografi Çerçevesi -->
+    <div class="container hero-center-container">
+      <div class="hero-minimal-frame">
+        <!-- 4 Köşe İşareti -->
+        <span class="corner-tick corner-tl" aria-hidden="true"></span>
+        <span class="corner-tick corner-tr" aria-hidden="true"></span>
+        <span class="corner-tick corner-bl" aria-hidden="true"></span>
+        <span class="corner-tick corner-br" aria-hidden="true"></span>
+
+        <h1 class="hero-minimal-title">cinnah.</h1>
+        <p class="hero-minimal-subtitle">
+          Büyüme İçin Yaratıcı Yön & Marka Mimarisi<br>
+          <span style="font-size: 0.9em; color: var(--c-gray-muted);">Sıradanlıkla yetinmeyen markalar için.</span>
+        </p>
+        <div class="hero-minimal-year">2026 — Gelecek</div>
+      </div>
+    </div>
+
+    <!-- Alt Bilgi Çubuğu -->
+    <div class="hero-bottom-bar">
+      <div class="container hero-bottom-inner">
+        <div class="hero-bottom-left">
+          <span>ANKARA'DAN. DÜNYAYA.</span>
+        </div>
+        <div class="hero-bottom-right">
+          <span>01 / KÖK · BİR ŞEHİRDEN DOĞAN, SINIRLARI AŞAN BAKIŞ</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 01: MANİFESTO & TEMELLER
+       ========================================================================== -->
+  <section class="section-manifesto" id="manifesto">
+    <div class="container">
+      
+      <div class="manifesto-header">
+        <div>
+          <div class="section-label">01 / Manifesto & Temeller</div>
+          <h2 class="section-title">Önce Hissedilir.<br><span style="font-weight: 400; color: var(--c-gray-light); font-size: 0.85em;">Stratejiden Deneyime.</span></h2>
+        </div>
+        <p class="manifesto-lead">
+          Markanızın zihinlerde bıraktığı iz, sadece ne söylediğinizle değil; yarattığınız hissin derinliği ve mimari netliğiyle ölçülür.
+        </p>
+      </div>
+
+      <!-- 4 Temel Kartı (KÖK, HİS, YÖN, YAPI) -->
+      <div class="manifesto-grid">
+        
+        <!-- 01 / KÖK -->
+        <div class="manifesto-card">
+          <div>
+            <div class="manifesto-num-header">
+              <span class="manifesto-num">01 / KÖK</span>
+              <div class="manifesto-icon-box"><div class="manifesto-icon-inner"></div></div>
+            </div>
+            <h3 class="manifesto-title">Ankara'dan.<br>Dünyaya.</h3>
+            <p class="manifesto-body">
+              Bir şehirden doğan, sınırları aşan bakış. Başkentin rasyonel zekasından, brütalist mimari mirasından ve entelektüel ağırlığından ilham alıyoruz. Köklerimiz sağlam, vizyonumuz küresel.
+            </p>
+          </div>
+          <div class="manifesto-quote-pill">
+            "Kökü olmayan fikirler rüzgarda savrulur; temeli sağlam yapılar çağları aşar."
+          </div>
+        </div>
+
+        <!-- 02 / HİS -->
+        <div class="manifesto-card featured-red">
+          <div>
+            <div class="manifesto-num-header">
+              <span class="manifesto-num">02 / HİS</span>
+              <div class="manifesto-icon-box" style="background-color: var(--c-red);"><div class="manifesto-icon-inner"></div></div>
+            </div>
+            <h3 class="manifesto-title">Önce<br>Hissedilir.</h3>
+            <p class="manifesto-body">
+              Stratejiden deneyime. İnsanlar rasyonel gerekçelerle onaylar ama duygusal rezonansla karar verir. Markanızın ilk temas anında bıraktığı o eşsiz ve silinmez hissi inşa ederiz.
+            </p>
+          </div>
+          <div class="manifesto-quote-pill">
+            "Duyguya dokunmayan hiçbir iletişim ticari büyüme yaratamaz."
+          </div>
+        </div>
+
+        <!-- 03 / YÖN -->
+        <div class="manifesto-card">
+          <div>
+            <div class="manifesto-num-header">
+              <span class="manifesto-num">03 / YÖN</span>
+              <div class="manifesto-icon-box"><div class="manifesto-icon-inner"></div></div>
+            </div>
+            <h3 class="manifesto-title">Büyümeye<br>Yön Ver.</h3>
+            <p class="manifesto-body">
+              Strateji. Yaratıcılık. Büyüme. Yaratıcılık süsleme sanatı değildir; en keskin rekabet avantajıdır. Doğru kreatif direksiyon, bir markanın kategorisini domine etmesini sağlar.
+            </p>
+          </div>
+          <div class="manifesto-quote-pill">
+            "Büyüme İçin Yaratıcı Yön: Estetik ile ticari ölçeklenmenin mükemmel kesişimi."
+          </div>
+        </div>
+
+        <!-- 04 / YAPI -->
+        <div class="manifesto-card">
+          <div>
+            <div class="manifesto-num-header">
+              <span class="manifesto-num">04 / YAPI</span>
+              <div class="manifesto-icon-box"><div class="manifesto-icon-inner"></div></div>
+            </div>
+            <h3 class="manifesto-title">Mimari Netlik.<br>Radikal Fikir.</h3>
+            <p class="manifesto-body">
+              Fazlalıklardan arındırılmış, cesur ve monolitik bir tasarım disiplini. Cinnah Caddesi'nin mimari netliği stüdyomuzun her işine yansır. Net konuşur, net üretiriz.
+            </p>
+          </div>
+          <div class="manifesto-quote-pill">
+            "Fazla olan her şeyi at. Geriye yalnızca saf güç ve anlam kalsın."
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 02: SEÇİLMİŞ PROJELER & PORTFÖY
+       ========================================================================== -->
+  <section class="section-works" id="works">
+    <div class="container">
+      
+      <div class="works-header-row">
+        <div>
+          <div class="section-label">02 / Seçilmiş Projeler</div>
+          <h2 class="section-title">Seçilmiş Projeler<br><span style="font-weight: 400; color: var(--c-gray-light); font-size: 0.85em;">& Eserler.</span></h2>
+        </div>
+
+        <!-- Filtreleme Butonları -->
+        <ul class="filter-nav" role="tablist">
+          <li><button class="filter-btn active" data-filter="all">Tümü (04)</button></li>
+          <li><button class="filter-btn" data-filter="spatial">02 / His</button></li>
+          <li><button class="filter-btn" data-filter="direction">03 / Yön</button></li>
+          <li><button class="filter-btn" data-filter="campaign">01 / Kök</button></li>
+        </ul>
+      </div>
+
+      <!-- Proje Kartları Izgarası (2x2 Dengeli Izgara) -->
+      <div class="works-grid">
+        
+        <!-- Case 1: 02 / HİS (brand_02_his.png) -->
+        <article class="work-card" data-project="brand-his" data-category="spatial">
+          <div class="work-image-holder">
+            <img src="assets/images/brand_02_his.png" alt="Cinnah 02 His - Önce Hissedilir" loading="lazy">
+            <span class="work-card-badge">02 / HİS · MARKA MİMARİSİ</span>
+            <div class="work-open-arrow">↗</div>
+          </div>
+          <div class="work-card-info">
+            <div>
+              <div class="work-meta-row">
+                <span>CİNNAH MEKANSAL KİMLİK</span>
+                <span>2026 · STRATEJİDEN DENEYİME</span>
+              </div>
+              <h3 class="work-title">Önce Hissedilir.</h3>
+              <p class="work-subtitle">
+                Stratejiden deneyime. Markanızın zihinlerde ve kalplerde bıraktığı eşsiz hissi tasarlarız.
+              </p>
+            </div>
+            <div class="work-tags">
+              <span class="tag-pill">Marka Mimarisi</span>
+              <span class="tag-pill">Mekansal Deneyim</span>
+              <span class="tag-pill">Kreatif Direktörlük</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 2: 03 / YÖN (brand_03_yon.png) -->
+        <article class="work-card" data-project="brand-yon" data-category="direction">
+          <div class="work-image-holder">
+            <img src="assets/images/brand_03_yon.png" alt="Cinnah 03 Yön - Büyümeye Yön Ver" loading="lazy">
+            <span class="work-card-badge">03 / YÖN · BÜYÜME STRATEJİSİ</span>
+            <div class="work-open-arrow">↗</div>
+          </div>
+          <div class="work-card-info">
+            <div>
+              <div class="work-meta-row">
+                <span>STRATEJİK YÖNELİM</span>
+                <span>2026 · STRATEJİ & BÜYÜME</span>
+              </div>
+              <h3 class="work-title">Büyümeye Yön Ver.</h3>
+              <p class="work-subtitle">
+                Strateji. Yaratıcılık. Büyüme. Markaları kategori liderliğine taşıyan mimari kılavuzluk.
+              </p>
+            </div>
+            <div class="work-tags">
+              <span class="tag-pill">Büyüme Stratejisi</span>
+              <span class="tag-pill">Kampanya Mimarisi</span>
+              <span class="tag-pill">Kreatif Direktörlük</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 3: 01 / KÖK (brand_01_kok.png) -->
+        <article class="work-card" data-project="brand-kok" data-category="campaign">
+          <div class="work-image-holder">
+            <img src="assets/images/brand_01_kok.png" alt="Cinnah 01 Kök - Ankara'dan Dünyaya" loading="lazy">
+            <span class="work-card-badge">01 / KÖK · ŞEHİR & VİZYON</span>
+            <div class="work-open-arrow">↗</div>
+          </div>
+          <div class="work-card-info">
+            <div>
+              <div class="work-meta-row">
+                <span>ANKARA CİNNAH MERKEZİ</span>
+                <span>2025 - 2026 · KÜRESEL VİZYON</span>
+              </div>
+              <h3 class="work-title">Ankara'dan. Dünyaya.</h3>
+              <p class="work-subtitle">
+                Bir şehirden doğan, sınırları aşan bakış. Ankara'nın brütalist dokusunu küresel yaratımla buluşturuyoruz.
+              </p>
+            </div>
+            <div class="work-tags">
+              <span class="tag-pill">Kültürel Miras</span>
+              <span class="tag-pill">Marka Filmi</span>
+              <span class="tag-pill">Editoryal Yönetim</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 4: Moda & Tipografi -->
+        <article class="work-card" data-project="noir-atelier" data-category="direction">
+          <div class="work-image-holder">
+            <img src="assets/images/case_editorial.jpg" alt="Noir Editions Atelier Campaign" loading="lazy">
+            <span class="work-card-badge">04 / TİPOGRAFİ & YÜKSEK MODA</span>
+            <div class="work-open-arrow">↗</div>
+          </div>
+          <div class="work-card-info">
+            <div>
+              <div class="work-meta-row">
+                <span>MAISON NOIR</span>
+                <span>2025 · PARİS / MİLANO</span>
+              </div>
+              <h3 class="work-title">Noir Editions</h3>
+              <p class="work-subtitle">
+                Radikal scarlet red zeminler ve anıtsal grotesk tipografiyle yüksek modaya brütalist bir kimlik kazandırma.
+              </p>
+            </div>
+            <div class="work-tags">
+              <span class="tag-pill">Editoryal Tipografi</span>
+              <span class="tag-pill">Moda Kimliği</span>
+              <span class="tag-pill">Sanat Yönetimi</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 03: UZMANLIK & DİSİPLİNLER
+       ========================================================================== -->
+  <section class="section-services" id="services">
+    <div class="container">
+      
+      <div class="section-label">03 / Uzmanlık Alanları</div>
+      <h2 class="section-title">Uzmanlık &<br><span style="font-weight: 400; color: var(--c-gray-light); font-size: 0.85em;">Disiplinlerimiz.</span></h2>
+
+      <!-- Hizmetler Listesi -->
+      <div class="services-accordion">
+        
+        <!-- 01 -->
+        <div class="service-row">
+          <div class="service-index">01</div>
+          <div class="service-main-title">Kreatif Direksiyon & Marka Stratejisi</div>
+          <div class="service-desc-column">
+            <p>
+              Markanızın pazardaki benzersiz yerini belirliyor; slogan, vizyon, ses tonu ve hikaye mimarisini en üst seviyede kurguluyoruz.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Marka Konumlandırma</li>
+              <li>Yaratıcı Direktörlük</li>
+              <li>Stratejik Söylem & Metin</li>
+              <li>Pazar Ayrışma Raporu</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="service-row">
+          <div class="service-index">02</div>
+          <div class="service-main-title">Görsel Kimlik & Tipografik Sistemler</div>
+          <div class="service-desc-column">
+            <p>
+              Logodan öte, markanızın tüm temas noktalarında konuşan anıtsal görsel sistemler, özel tipografiler ve ödünsüz kurumsal rehberler tasarlıyoruz.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Kurumsal Kimlik Sistemleri</li>
+              <li>Özel Tipografi Tasarımı</li>
+              <li>Tasarım Kılavuzları (Brand Book)</li>
+              <li>Ambalaj & Yayın Tasarımı</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="service-row">
+          <div class="service-index">03</div>
+          <div class="service-main-title">360° Reklam Kampanyaları & Prodüksiyon</div>
+          <div class="service-desc-column">
+            <p>
+              Yüksek prodüksiyon kalitesine sahip reklam filmleri, dijital kampanyalar, fotoğraf çekimleri ve dikkat çeken açık hava yerleştirmeleri.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Lansman Kampanyaları</li>
+              <li>Ticari Reklam Filmleri</li>
+              <li>Fotoğraf & Sanat Yönetimi</li>
+              <li>Açıkhava & Dijital Entegrasyon</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="service-row">
+          <div class="service-index">04</div>
+          <div class="service-main-title">Dijital Deneyimler & Mekansal Tasarım</div>
+          <div class="service-desc-column">
+            <p>
+              Web siteleri, etkileşimli dijital platformlar, 3D görselleştirmeler ve markanızı fiziksel dünyada hissettiren mekansal enstalasyonlar.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Ödüllü Web & Arayüz Tasarımı</li>
+              <li>3D & İnteraktif Deneyimler</li>
+              <li>Mekansal Enstalasyon</li>
+              <li>Etkinlik & Deneyim Tasarımı</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 04: STÜDYO & MİRAS ("KÖK")
+       ========================================================================== -->
+  <section class="section-about" id="studio">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <div class="about-text-column">
+          <div class="section-label">04 / Stüdyo & Miras</div>
+          <div class="lead-paragraph" style="font-weight: 600;">
+            Ankara Cinnah Caddesi'nin <span style="font-weight: 400; color: var(--c-red);">Mimari Mirasından</span> Beslenen Küresel Bir Yaratıcı Merkez.
+          </div>
+          <p>
+            CİNNAH; gürültüden uzak, derinlikli düşünceyi ve cesur yaratıcı vizyonu merkeze alan bağımsız bir reklam ve marka ajansıdır. Ankara'nın brütalist yapılarından ilham alan strüktürel disiplinimiz, işlerimize zamansız bir ağırlık kazandırır.
+          </p>
+          <p>
+            Bizim için her proje, bir markanın pazar içindeki duruşunu dönüştürme fırsatıdır. Tasarım süslemez; inşa eder. İletişim duyurmaz; hissettirir.
+          </p>
+
+          <!-- İstatistik Şeridi -->
+          <div class="stats-counter-strip">
+            <div class="stat-item-box">
+              <span class="stat-val">+140</span>
+              <span class="stat-caption">Başarılı Marka Projesi</span>
+            </div>
+            <div class="stat-item-box">
+              <span class="stat-val">18+</span>
+              <span class="stat-caption">Küresel Pazar Etkisi</span>
+            </div>
+            <div class="stat-item-box">
+              <span class="stat-val">36</span>
+              <span class="stat-caption">Tasarım & Reklam Ödülü</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-column">
+          <div class="studio-photo-frame">
+            <img src="assets/images/brand_03_yon.png" alt="Cinnah Yaratıcı Direksiyon & Stüdyo Mirası" loading="lazy">
+          </div>
+          <div class="floating-quote-badge">
+            <p>"ÖNCE HİSSEDİLİR, SONRA KONUŞULUR."</p>
+            <span>CİNNAH MANİFESTO 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 05: ETKİLEŞİMLİ PROJE PLANLAYICI ("HAREKETE GEÇ")
+       ========================================================================== -->
+  <section class="section-brief-builder" id="brief-builder">
+    <div class="container">
+      
+      <div class="section-label">05 / Proje Başlat</div>
+      <h2 class="section-title">Birlikte<br><span style="font-weight: 400; color: var(--c-gray-light); font-size: 0.85em;">Başlatalım.</span></h2>
+
+      <div class="brief-container">
+        
+        <form id="brief-form">
+          
+          <!-- Adım 1: Hizmetler -->
+          <div class="brief-step-wrap">
+            <div class="brief-step-title">[ADIM 01 / 03] İhtiyaç Duyduğunuz Disiplinler</div>
+            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Hangi Alanlarda Yaratıcı Güç Arıyorsunuz?</div>
+            
+            <div class="selectable-chips-grid" id="brief-services">
+              <div class="selectable-chip selected" data-value="Kreatif Direktörlük">
+                <span class="chip-label">Kreatif Direktörlük</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="Marka Kimliği">
+                <span class="chip-label">Marka Kimliği</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="360° Kampanya">
+                <span class="chip-label">360° Reklam Kampanyası</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="Dijital & Mekansal Deneyim">
+                <span class="chip-label">Dijital & Mekansal Deneyim</span>
+                <div class="chip-indicator"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adım 2: Zaman Çizelgesi -->
+          <div class="brief-step-wrap">
+            <div class="brief-step-title">[ADIM 02 / 03] Zaman Çizelgesi</div>
+            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Projenin Hedeflenen Tamamlanma Süresi</div>
+            
+            <div class="selectable-chips-grid" id="brief-timeline">
+              <div class="selectable-chip" data-value="1-2 Ay (Hızlı Faz)">
+                <span class="chip-label">1 - 2 Ay (Hızlı Faz)</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip selected" data-value="2-4 Ay (Standart)">
+                <span class="chip-label">2 - 4 Ay (Standart)</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="4-6+ Ay (Kapsamlı Dönüşüm)">
+                <span class="chip-label">4 - 6+ Ay (Kapsamlı Dönüşüm)</span>
+                <div class="chip-indicator"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adım 3: Bütçe -->
+          <div class="brief-step-wrap">
+            <div class="brief-step-title">[ADIM 03 / 03] Yatırım Ölçeği</div>
+            <div class="brief-step-headline" style="font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem);">Hedeflenen Bütçe Aralığı</div>
+            
+            <div class="selectable-chips-grid" id="brief-budget">
+              <div class="selectable-chip" data-value="₺100.000 - ₺250.000">
+                <span class="chip-label">₺100.000 - ₺250.000</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip selected" data-value="₺250.000 - ₺500.000">
+                <span class="chip-label">₺250.000 - ₺500.000</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="₺500.000 - ₺1.000.000+">
+                <span class="chip-label">₺500.000 - ₺1.000.000+</span>
+                <div class="chip-indicator"></div>
+              </div>
+              <div class="selectable-chip" data-value="Kurumsal & Özel Ölçek">
+                <span class="chip-label">Kurumsal & Özel Ölçek</span>
+                <div class="chip-indicator"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- İletişim Bilgisi Girişi -->
+          <div class="brief-inputs-grid">
+            <div class="input-field-group">
+              <label for="brief-name">Adınız & Soyadınız *</label>
+              <input type="text" id="brief-name" placeholder="Örn. Selim Yılmaz" required>
+            </div>
+            <div class="input-field-group">
+              <label for="brief-email">Kurumsal E-Posta *</label>
+              <input type="email" id="brief-email" placeholder="selim@marka.com" required>
+            </div>
+            <div class="input-field-group">
+              <label for="brief-company">Marka / Şirket Adı</label>
+              <input type="text" id="brief-company" placeholder="Örn. Aura Holding">
+            </div>
+            <div class="input-field-group">
+              <label for="brief-phone">Telefon Numarası</label>
+              <input type="tel" id="brief-phone" placeholder="+90 (5xx) xxx xx xx">
+            </div>
+            <div class="input-field-group full-width">
+              <label for="brief-message">Proje Hakkında Kısa Not / Vizyonunuz</label>
+              <textarea id="brief-message" rows="3" placeholder="Markanızın hedefleri ve aradığınız dönüşüm hakkında kısa detaylar..."></textarea>
+            </div>
+          </div>
+
+          <!-- Canlı Özet Çubuğu & Gönderim -->
+          <div class="brief-summary-bar">
+            <div class="brief-summary-text">
+              SEÇİLEN DİSİPLİNLER: <strong id="brief-summary-service">Kreatif Direktörlük</strong> · 
+              SÜRE: <strong id="brief-summary-timeline">2-4 Ay (Standart)</strong> · 
+              ÖLÇEK: <strong id="brief-summary-budget">₺250.000 - ₺500.000</strong>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              <span>Brifi Gönder & Tanışalım</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
+              </svg>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BÖLÜM 06: İLETİŞİM & ANKARA MERKEZ OFİSİ
+       ========================================================================== -->
+  <section class="section-contact" id="contact">
+    <div class="container">
+      
+      <div class="contact-layout-grid">
+        
+        <div>
+          <div class="section-label">06 / İletişim</div>
+          <h2 class="contact-huge-title" style="font-weight: 600;">Bir Kahve.<br><span style="font-weight: 400; color: var(--c-gray-light); font-size: 0.85em;">Bir Vizyon.</span></h2>
+          
+          <p style="font-size: 1.15rem; color: var(--c-gray-muted); margin-bottom: 2rem; max-width: 500px;">
+            Ankara Cinnah Caddesi'ndeki stüdyomuzda tanışmak ya da küresel projenizi başlatmak için ekibimize doğrudan ulaşın.
+          </p>
+
+          <a href="mailto:hello@cinnah.agency" class="contact-direct-link">
+            hello@cinnah.agency ↗
+          </a>
+
+          <div class="address-details-box">
+            <div class="address-block">
+              <h4>Stüdyo Adresi</h4>
+              <p>
+                Cinnah Caddesi No: 42/B<br>
+                Çankaya 06690<br>
+                Ankara / TÜRKİYE
+              </p>
+            </div>
+            <div class="address-block">
+              <h4>Telefon & Santral</h4>
+              <p>
+                +90 (312) 440 26 00<br>
+                Pzt - Cum: 09:00 - 19:00 (GMT+3)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etkileşimli Ankara Harita Kartı -->
+        <div class="map-interactive-card">
+          <div class="map-top-coords">
+            <span>KONUM: ANKARA / ÇANKAYA</span>
+            <span>39.9038° N, 32.8597° E</span>
+          </div>
+
+          <div class="map-visual-illustration">
+            <div class="map-target-pin" title="Cinnah Yaratıcı Merkez Ofisi">
+              <div class="map-target-pin-inner"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--c-white);">
+              CİNNAH MERKEZ OFİSİ
+            </span>
+            <a href="https://maps.google.com/?q=Cinnah+Caddesi+Ankara" target="_blank" rel="noopener" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+              Haritada Aç ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ALT BİLGİ (FOOTER)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Devasa Dinamik Marka Şeridi -->
+      <div class="footer-stretch-logo-area">
+        <div class="footer-massive-brand">
+          <span>c</span>
+          <div class="footer-stretch-bar"></div>
+          <span>h</span>
+        </div>
+      </div>
+
+      <!-- Footer Kolonları -->
+      <div class="footer-columns-grid">
+        
+        <div class="footer-col">
+          <h5>CİNNAH YARATICI DİREKSİYON</h5>
+          <p style="font-size: 0.95rem; color: var(--c-gray-muted); line-height: 1.6; max-width: 320px; margin-bottom: 1.5rem;">
+            Ankara'dan Dünyaya. Markaların pazar liderliğine giden yolunu şekillendiren bağımsız yaratıcı direktörlük stüdyosu.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-red);">
+            BÜYÜME İÇİN YARATICI YÖN © 2026
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Gezinme</h5>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Anasayfa</a></li>
+            <li><a href="#manifesto" class="footer-link">Manifesto & Kök</a></li>
+            <li><a href="#works" class="footer-link">Seçilmiş Portföy</a></li>
+            <li><a href="#services" class="footer-link">Hizmet Alanları</a></li>
+            <li><a href="#studio" class="footer-link">Stüdyo Felsefesi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ağ & Sosyal</h5>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link">Instagram ↗</a></li>
+            <li><a href="#" class="footer-link">Behance ↗</a></li>
+            <li><a href="#" class="footer-link">LinkedIn ↗</a></li>
+            <li><a href="#" class="footer-link">Vimeo ↗</a></li>
+            <li><a href="#" class="footer-link">X (Twitter) ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Cinnah Bülten</h5>
+          <p style="font-size: 0.88rem; color: var(--c-gray-muted); margin-bottom: 1rem;">
+            Tasarım, strateji ve yaratıcı yönelim üzerine periyodik bültenimiz.
+          </p>
+          <form id="newsletter-form" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="E-posta adresiniz" required style="background: var(--c-black-surface); border: 1px solid var(--c-black-border); padding: 0.6rem 0.8rem; color: #fff; font-size: 0.85rem; width: 100%; outline: none;">
+            <button type="submit" class="btn-primary" style="padding: 0.6rem 1rem;"><span>KAYDOL</span></button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Alt Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          <span>CİNNAH AJANS VE DANIŞMANLIK A.Ş. TÜM HAKLARI SAKLIDIR.</span>
+        </div>
+        <div>
+          <span>ANKARA'DA MİMARİ HASSASİYETLE TASARLANDI</span>
+        </div>
+        <div>
+          <button id="back-to-top" class="back-to-top-btn">Başa Dön ↑</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJE DETAY MODALI (LIGHTBOX)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close" aria-label="Kapat">✕</button>
+      
+      <div class="modal-content-body">
+        <img src="" alt="" id="modal-img" class="modal-image-hero">
+        
+        <div class="modal-case-header">
+          <div class="label" id="modal-category">KATEGORİ</div>
+          <h2 id="modal-title">PROJE ADI</h2>
+        </div>
+
+        <div class="modal-details-grid">
+          <div class="modal-details-text">
+            <h4 style="font-family: var(--font-body); font-weight: 600; font-size: 1.35rem; color: var(--c-white); margin-bottom: 1rem;" id="modal-lead"></h4>
+            <p id="modal-overview"></p>
+            
+            <div style="margin-top: 2rem;">
+              <h5 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--c-red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">Teslim Edilen Çıktılar</h5>
+              <ul class="service-deliverables-list" id="modal-deliverables"></ul>
+            </div>
+          </div>
+
+          <div class="modal-sidebar-info">
+            <div class="modal-info-unit">
+              <h5>Müşteri / Marka</h5>
+              <p id="modal-client"></p>
+            </div>
+            <div class="modal-info-unit">
+              <h5>Yıl & Faz</h5>
+              <p id="modal-year"></p>
+            </div>
+            <div class="modal-info-unit">
+              <h5>Somut Pazar Etkisi</h5>
+              <p id="modal-metrics" style="color: var(--c-red); font-weight: 600;"></p>
+            </div>
+            <div class="modal-info-unit">
+              <h5>Ajans Rolü</h5>
+              <p>Kreatif Direktörlük, Lider Ajans</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Kodları -->
+  <script src="app.js"></script>
+</body>
+</html>
