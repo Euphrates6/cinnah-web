@@ -29,5 +29,6 @@ jobs:
               --exclude-glob .git* \
               --exclude-glob .github* \
               --only-newer \
-              ./ public_html/
+              ./ public_html/;
+            bye
           "
