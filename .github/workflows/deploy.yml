@@ -18,4 +18,4 @@ jobs:
 
       - name: 📂 Sync files via LFTP
         run: |
-          lftp -e "set ssl:verify-certificate false; set ftp:ssl-allow true; set ftp:passive-mode true; mirror -R -v --only-newer -X '.git*' -X '.github*' ./ public_html/; quit" -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}"
+          lftp -e "set ssl:verify-certificate false; set ftp:ssl-allow true; set ftp:passive-mode true; set net:timeout 15; set net:max-retries 2; mirror -R -v --only-newer -X '.git*' -X '.github*' ./ public_html/; quit" -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}"
